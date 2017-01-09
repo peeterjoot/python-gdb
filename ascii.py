@@ -32,6 +32,8 @@ class AsciiCommand (gdb.Command):
         # https://sourceware.org/gdb/onlinedocs/gdb/Values-From-Inferior.html#Values-From-Inferior
         v = gdb.parse_and_eval( arg )
         w = gdb.Value.string( v )
+
+        # https://sourceware.org/gdb/onlinedocs/gdb/Character-Sets.html#Character-Sets
         #w = gdb.Value.lazy_string( 'cp1047', gdb.Value.fetch_lazy(v) )
         #v = gdb.selected_frame().read_var( arg )
         #top = gdb.newest_frame()
